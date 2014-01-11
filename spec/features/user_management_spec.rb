@@ -11,6 +11,12 @@ feature 'user signs up' do
   scenario 'with a non-matching password' do 
     lambda { sign_up('larahy@gmail.com', 'pword', "password") }.should change(User, :count).by(0)
   end
+  scenario 'with a user that is already registered' do 
+    lambda { sign_up }.should change(User, :count).by(1)
+    lambda { sign_up }.should change(User, :count).by(0)
+    expect(page).to have_content("This email is already in use")
+  end
+  
 
   def sign_up(email = "example@example.com", password = "password", password_confirmation = "password")
     visit '/users/new'
