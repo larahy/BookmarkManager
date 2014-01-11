@@ -11,17 +11,17 @@ RSpec.configure do |config|
   config.filter_run :focus
   config.order = 'random'
 
-  config.before(:each) do
-    DatabaseCleaner.strategy = :transaction 
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before(:each) do
-    DatabaseCleaner.start 
+    DatabaseCleaner.start
   end
 
-  config.after(:each) do 
-    DatabaseCleaner.clean 
+  config.after(:each) do
+    DatabaseCleaner.clean
   end
 
 end
