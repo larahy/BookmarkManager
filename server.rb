@@ -12,5 +12,6 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/' do 
+  @links = Link.all
   erb :index
 end
