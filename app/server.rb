@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'data_mapper'
 require 'rack-flash'
+require 'sinatra/partial'
 require './lib/link'
 require './lib/tag'
 require './lib/user'
@@ -10,6 +11,7 @@ require_relative 'datamapper_setup'
 enable :sessions
 set :session_secret, 'unique'
 use Rack::Flash 
+set :partial_template_engine, :erb
 
 
 get '/' do
@@ -50,6 +52,12 @@ post '/sessions' do
     flash[:errors] = ["The email or password are incorrect"]
     erb :"sessions/new"
   end
+end
+
+delete '/sessions' do
+  flash[:notice] = "Good bye!"
+  session[:user_id] = nil
+  redirect to('/')
 end
 
 post '/users' do
