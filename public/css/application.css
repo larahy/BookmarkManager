@@ -1,0 +1,103 @@
+header {
+  height: 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 0 20px;
+}
+
+header > * {
+  margin: auto 0;
+}
+
+header #user-links {
+  flex:; 1;
+  -webkit-flex: 1;
+  text-align: right;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #b77843;
+}
+
+a.button {
+  display: inline-block;
+  width: 80px;
+  background-color: #754C78;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+a.button.highlighted {
+  background-color: #800080;
+}
+
+body {
+  font-family: Georgia, Helvetica, Sans-serif;
+  background-image: url(/images/bookshelf.jpg);
+  color: #333;
+}
+
+#links-container {
+  background-color: white;
+  margin: 40px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  padding: 10px;
+}
+
+.link {
+  background-color: #754C78;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  margin: 10px inherit;
+  padding: 15px 10px;
+}
+
+  .link a.title {
+    letter-spacing: 1px;    
+  }
+
+  .link .description {
+    margin: 10px inherit;
+  }
+
+  .link .source {
+    float: right;
+    font-size: 12px;
+  }
+
+  footer {
+  display: flex;
+  background-color: rgba(0,0,0,0.2);
+}
+
+  footer > * {
+    margin: auto inherit;
+    color: white;
+  }
+
+  footer img {
+    /* http://stackoverflow.com/questions/10658475/3px-extra-height-on-a-div-with-an-image-inside-it */
+    vertical-align: top;
+  }
+
+  footer #technologies {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  footer p {
+    padding: 5px 25px;
+  }
+
