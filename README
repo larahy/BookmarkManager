@@ -4,4 +4,6 @@ BOOKMARK MANAGER -- Week 6 Challenge -- set by @shadchnev
 
 Task was to build a simple bookmark manager. This application was built in Sinatra and used PostgreSQL, HTML and CSS.
 
+I made the error of deleting the repository in order to run through the processes again, as a result my tests are less comprehensive.  The initial version used stubbing to fully test the user sign in/sign up process, including password retrieval using Mailgun. 
+
 
